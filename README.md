@@ -41,7 +41,7 @@ PATCH version when you make backwards-compatible bug fixes
 
 ## Authors
 
-* **Riley Shumway** - *Initial work, updates, and managment* - [PurpleBooth](https://github.com/DragonHeart000)
+* **Riley Shumway** - *Initial work, updates, and managment* - [DragonHeart000](https://github.com/DragonHeart000)
 
 See also the list of [contributors](https://github.com/DragonHeart000/OsuBot/graphs/contributors) who participated in this project.
 
