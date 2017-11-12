@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ninja.dragonheart.OsuBot.Controller">
+  <children>
+    <Text layoutX="235.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Osu!Bot is running!">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Text>
+    <Separator layoutX="14.0" layoutY="41.0" prefWidth="612.0" />
+    <Text layoutX="284.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Control Panel" />
+    <ListView fx:id="adminListView" disable="false" layoutX="426.0" layoutY="89.0" prefHeight="237.0" prefWidth="199.99990000000253" />
+    <Separator layoutX="401.0" layoutY="77.0" orientation="VERTICAL" prefHeight="261.0" />
+    <Text layoutX="506.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admins" />
+    <TextField fx:id="adminToAdd" disable="false" layoutX="97.0" layoutY="101.0" prefWidth="200.0" />
+    <Text layoutX="21.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Admin" />
+    <Button disable="false" layoutX="320.0" layoutY="102.0" mnemonicParsing="false" onMouseReleased="#addAdmin" text="Submit" />
+    <Button disable="false" layoutX="321.0" layoutY="151.0" mnemonicParsing="false" onMouseReleased="#removeAdmin" text="Submit" />
+    <TextField fx:id="adminToRemove" disable="false" layoutX="97.0" layoutY="150.0" prefWidth="200.0" />
+    <Text layoutX="11.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove Admin" />
+    <TextField fx:id="userToBan" layoutX="97.0" layoutY="219.0" prefWidth="200.0" />
+    <Text layoutX="28.0" layoutY="235.0" scaleX="1.0" scaleY="1.0000013827226764" strokeType="OUTSIDE" strokeWidth="0.0" text="Ban User" />
+    <Button layoutX="305.0" layoutY="220.0" mnemonicParsing="false" onMouseReleased="#banUser" text="Ban Hammer" />
+    <Button layoutX="321.0" layoutY="261.0" mnemonicParsing="false" onMouseReleased="#unBanUser" text="Submit" />
+    <TextField fx:id="userToUnban" layoutX="97.0" layoutY="261.0" prefWidth="200.0" />
+    <Text layoutX="20.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unban User" />
+  </children>
+</AnchorPane>
