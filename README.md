@@ -51,7 +51,9 @@ PATCH version when you make backwards-compatible bug fixes
 
 ## Authors
 
-* **Riley Shumway** - *Initial work, updates, and managment* - [DragonHeart000](https://github.com/DragonHeart000)
+* **Riley Shumway** - *Initial work, updates, and managment* - [WebSite](https://dragonheart.ninja/)
+
+* **Hans Granroth** - *Icon image* - [Steam](http://steamcommunity.com/profiles/76561198086985819/)
 
 See also the list of [contributors](https://github.com/DragonHeart000/OsuBot/graphs/contributors) who participated in this project.
 
