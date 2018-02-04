@@ -2,6 +2,7 @@ package ninja.dragonheart.OsuBot;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import org.pircbotx.Configuration;
@@ -14,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -318,13 +320,29 @@ public void startLoaded() throws IOException{
 //////////////////////////////////////////////////////////////END OF LOAD SETTINGS/////////////////////////////////////////////////////
 	
 	public void about() throws IOException{
-		String url_open ="https://dragonheart.ninja/"; //Set URL to open
-		java.awt.Desktop.getDesktop().browse(java.net.URI.create(url_open));  //opens the URL in the default browser
+		Alert alert = new Alert(AlertType.CONFIRMATION); //Create alert
+		alert.setTitle("Confirmation");
+		alert.setHeaderText("This will open up my website in your web browser");
+		alert.setContentText("Do you wish to proceed");
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == ButtonType.OK){ //If user says ok then the website will open otherwise nothing happens
+			String url_open ="https://dragonheart.ninja/"; //Set URL to open
+			java.awt.Desktop.getDesktop().browse(java.net.URI.create(url_open));  //opens the URL in the default browser
+		}
 	}
 	
 	public void gitHub() throws IOException{
-		String url_open ="https://github.com/DragonHeart000/OsuBot"; //Set URL to open
-		java.awt.Desktop.getDesktop().browse(java.net.URI.create(url_open));  //opens the URL in the default browser
+		Alert alert = new Alert(AlertType.CONFIRMATION); //Create alert
+		alert.setTitle("Confirmation");
+		alert.setHeaderText("This will open up the GitHub page in your web browser");
+		alert.setContentText("Do you wish to proceed");
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == ButtonType.OK){ //If user says ok then the website will open otherwise nothing happens
+			String url_open ="https://github.com/DragonHeart000/OsuBot"; //Set URL to open
+			java.awt.Desktop.getDesktop().browse(java.net.URI.create(url_open));  //opens the URL in the default browser
+		} 
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -405,7 +423,7 @@ public void startLoaded() throws IOException{
 			alert.setHeaderText(null);
 			alert.setContentText("Osu!Bot was unable to locate C://osuBot/osuSettings.bin! That may sound scary but is actually okay "
 					+ "using the osu chat is not needed for Osu!Bot to work but is recomended. You may feel free to continue as is or "
-					+ "you can go to File>New File and reconfigure Osu!Bot.");
+					+ "you can go to \"File>New File\" and reconfigure Osu!Bot.");
 			alert.showAndWait();
 		}
 		if (FileHandleing.exists("C://osuBot/lists.bin")){ //check if settings are saved in the default spot
